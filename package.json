@@ -1,0 +1,36 @@
+{
+  "name": "lifeos-ai",
+  "version": "0.1.0",
+  "description": "AI-powered personal operating system for life transformation",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "db:push": "cd packages/database && npx prisma db push",
+    "db:migrate": "cd packages/database && npx prisma migrate dev",
+    "db:studio": "cd packages/database && npx prisma studio"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0",
+    "turbo": "^1.10.0",
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/*"
+  ]
+}
